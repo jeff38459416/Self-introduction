@@ -1,0 +1,216 @@
+html {
+    height: 100%; }
+  
+  body {
+    background-image:  linear-gradient(-45deg, rgba(166, 164, 164, 0.6), 
+    rgba(246, 246, 246, 0.822)),url("https://images5.alphacoders.com/634/634634.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover; }
+    .happy{
+        width: 1700px;
+        margin: 100px auto;
+        overflow: hidden; /* 避免長方框下面顯示不正常 */
+      }
+    
+    .title{
+        height: 100px;
+        color: rgba(248, 248, 249, 0.621);
+        font-size: 50px;
+        background:linear-gradient(-45deg, rgba(248, 248, 249, 0.6), 
+        rgba(24, 23, 23, 0.518));
+      }
+      a {
+        color: rgb(21, 20, 20);
+        font-size: 20px;
+        color:black;
+    }
+    .word{
+        font-size: 20px;
+    }
+    p{
+        margin-left:150px;
+    }
+h2{
+    color: rgb(21, 20, 20);
+    font-size: 35px;
+
+}
+h1{
+    color: rgb(21, 20, 20);
+    text-align:center;
+    height: 100px;
+    font-size: 65px;
+
+}
+h3{
+    font-size: 30px;
+    margin-left:150px;
+}
+h5{
+    color: rgb(21, 20, 20);
+    height: 100px;
+    font-size: 65px;
+}
+.item{
+    color: aqua;
+}
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+#menu_control{
+    position: absolute;
+    z-index: -2;
+    opacity: 0;
+}
+.header{
+    height: 50px;
+    background-color: #ccc;
+    position: relative;
+}
+.logo{
+    width: 60px;
+    height: 40px;
+    margin-left: 10px;
+}
+.logo a{
+    display: block;
+    height: 40px;
+}
+.logo img{
+    vertical-align: middle;
+}
+.menu_btn{
+    width: 40px;
+    height: 40px;
+    background-color:  rgba(79, 79, 79, 0.581);
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+.menu_btn span{
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+    display: block;
+    overflow: hidden;
+}
+.menu_btn::before{
+    content:  '';
+    position: absolute;
+    height: 2px;
+    left: 2px;
+    width: 36px;
+    background-color: #aaa;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    box-shadow: 0px 8px 0px #aaa,
+                0px -8px 0px #aaa;
+
+}
+nav{
+    width: 80%;
+    height: calc(100vh - 50px);
+    background-color: #373839c9;
+    position: absolute;
+    top: 50px;
+    left: -100%;
+    transition: .5s;
+}
+nav a{
+    display:block;
+    text-decoration: none;
+    color: #f5f5f5;
+    padding: 10px 20px;
+    border-bottom: 1px solid #141415;
+}
+#menu_control:checked ~ .header nav{
+    left: 0;
+}
+img{
+    border: 0;
+    max-width: 100%;
+    height:auto;
+}
+/*連結顏色設定*/
+a{
+    color: #000000;
+}
+
+/*次頁面標題設定*/
+.h{
+    padding: 10px;
+    margin-bottom: 30px;
+    border: 1px dotted #94c8b1;
+    border-left: 10px solid #d0e35b;
+    color: #6fbb9a;
+}
+
+/*小標題設定*/
+.h-sub{
+    padding: 10px;
+    background-color: #80e970;
+    color: #912716;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 2px #ffd0ad inset;
+
+}
+
+
+/*區塊間分隔*/
+section+section{
+    margin-top: 90px;
+}
+.bdcard{
+    float: none;/* 圖片在左邊 */
+    padding: 20px;
+  }
+  .bdcard img{
+    margin-right:200px;
+    display: block;
+    max-width:100%;height:auto !important
+  }
+.bdtext{
+   float: none;
+    font-size: 25px;
+    margin-right:200px;
+  }
+
+@media screen and (min-width : 768px) {
+    .bdcard{
+        float: left;
+        padding: 20px;
+    }
+    .bdcard img{
+        max-width:100%;height:auto !important
+    }
+    .bdtext{float: right;}
+    .menu_btn{display: none;}
+    .header{
+        display: flex;
+        justify-content: space-between;
+        background-color: #000000a1;
+        align-items: center;
+    }
+    
+    nav{
+        position: relative;
+        left: 0;
+        display: flex;
+        width: auto;
+        height: auto;
+        top: 0;
+        background-color: transparent;
+    }
+    nav a{
+        border-bottom: none;
+    }
+}
